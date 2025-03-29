@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://fevntoqv6sm1"]
+
+[ext_resource type="Texture2D" uid="uid://b4xxso0upec2e" path="res://assets/level01.png" id="1_bpt1m"]
+[ext_resource type="Script" uid="uid://cj5plwn0yyk2k" path="res://script/level_01.gd" id="1_qgxqk"]
+[ext_resource type="Texture2D" uid="uid://7mhm5imokr0o" path="res://assets/pikaso-creations/1.png" id="2_nr3cb"]
+[ext_resource type="Texture2D" uid="uid://cbfki153iy4rq" path="res://assets/pikaso-creations/2.png" id="3_j60wy"]
+[ext_resource type="Texture2D" uid="uid://dkd63vpbn0pis" path="res://assets/pikaso-creations/3.png" id="4_qgxqk"]
+[ext_resource type="PackedScene" uid="uid://dlpgn7vjuqhpr" path="res://scenes/cliclable_object.tscn" id="5_j60wy"]
+
+[node name="level01" type="Node2D"]
+script = ExtResource("1_qgxqk")
+
+[node name="backgroundlevel01" type="TextureRect" parent="."]
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 1153.0
+offset_bottom = 654.0
+texture = ExtResource("1_bpt1m")
+expand_mode = 1
+
+[node name="ObjectsColetaveis" type="Node" parent="."]
+
+[node name="object1" type="Sprite2D" parent="ObjectsColetaveis"]
+position = Vector2(119, 590)
+scale = Vector2(0.0945946, 0.0721096)
+texture = ExtResource("2_nr3cb")
+
+[node name="object2" type="Sprite2D" parent="ObjectsColetaveis"]
+position = Vector2(197, 594)
+scale = Vector2(0.0904645, 0.0744681)
+texture = ExtResource("3_j60wy")
+
+[node name="object3" type="Sprite2D" parent="ObjectsColetaveis"]
+position = Vector2(284, 592)
+scale = Vector2(0.09118, 0.0845666)
+texture = ExtResource("4_qgxqk")
+
+[node name="cliclableobjects" type="Node" parent="."]
+
+[node name="cliclableObject" parent="cliclableobjects" instance=ExtResource("5_j60wy")]
+position = Vector2(993, 535)
+nome = "object1"
+
+[node name="cliclableObject2" parent="cliclableobjects" instance=ExtResource("5_j60wy")]
+position = Vector2(373, 74)
+nome = "object2"
+
+[node name="cliclableObject3" parent="cliclableobjects" instance=ExtResource("5_j60wy")]
+position = Vector2(245, 480)
+nome = "object3"

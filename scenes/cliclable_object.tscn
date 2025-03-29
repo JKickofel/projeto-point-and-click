@@ -1,0 +1,54 @@
+[gd_scene load_steps=13 format=3 uid="uid://dlpgn7vjuqhpr"]
+
+[ext_resource type="Script" uid="uid://bchvww8ww7myg" path="res://script/clicableobject.gd" id="1_6hrwv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hrwv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bnhv5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_26n4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tihfv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8s758"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kp8b7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7xcd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7os60"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r55ss"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvpsy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a6vjh"]
+
+[node name="cliclableObject" type="Node2D"]
+script = ExtResource("1_6hrwv")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -26.0
+offset_right = 21.5
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6hrwv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_bnhv5")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_26n4m")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tihfv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_8s758")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_kp8b7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l7xcd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_7os60")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r55ss")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_cvpsy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a6vjh")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
